@@ -11,7 +11,7 @@ defmodule RandomSearchTest do
     }
   end
 
-  test "algorithm 2.2.1 as proxy for RandomSearch.search", meta do
+  test "algorithm 2.2.1 implementation as proxy for RandomSearch.search", meta do
     %{ best: best, candidates: candidates } = CleverElixirAlgorithms.StochasticAlgorithms.RandomSearch.algorithm_2_2_1(meta[:problem])
     assert CleverElixirAlgorithmsTestHelper.is_min? best, candidates
   end

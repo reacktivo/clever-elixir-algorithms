@@ -29,13 +29,3 @@ defmodule CleverElixirAlgorithms.Utilities do
     fn first_sample, second_sample -> if objective_fn.(second_sample) <= objective_fn.(first_sample), do: second_sample, else: first_sample end
   end
 end
-
-#
-#
-# def algo_components(%{ problem_size: problem_size, max_iter: mi, search_space: search_space, cost: cost_fn }) do
-#   iterations = Range.new(1, mi)
-#   objective = fn estimates -> Enum.reduce(estimates, 0, fn(x, acc) -> cost_fn.(x) + acc end) end
-#   random_sample = fn -> Enum.map(Range.new(1, problem_size), fn(_) -> CleverElixirAlgorithms.Utilities.random_uniform_value(search_space) end) end
-#   cost_compare = fn first_sample, second_sample -> if objective.(second_sample) <= objective.(first_sample), do: second_sample, else: first_sample end
-#   %{ max_iter: iterations, random_sample: random_sample, cost_compare: cost_compare }
-# end
